@@ -1,4 +1,8 @@
 import React from "react";
+import {
+    Switch,
+    Route
+} from "react-router-dom";
 
 import Header from "./components/Header";
 import AllPokemons from "./pages/AllPokemons";
@@ -6,12 +10,20 @@ import CaughtPokemons from "./pages/CaughtPokemons";
 import PokemonDetails from "./pages/PokemonDetails";
 
 function App() {
-    return(
+    return (
         <>
             <Header/>
-            <AllPokemons/>
-            <CaughtPokemons/>
-            <PokemonDetails/>
+            <Switch>
+                <Route exact path="/">
+                    <AllPokemons/>
+                </Route>
+                <Route path="/caught">
+                    <CaughtPokemons/>
+                </Route>
+                <Route parh="/pikachu">
+                    <PokemonDetails/>
+                </Route>
+            </Switch>
         </>
     );
 }
