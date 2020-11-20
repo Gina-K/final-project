@@ -5,9 +5,9 @@ const Context = React.createContext();
 function ContextProvider({children}) {
     const [allPokemons, setAllPokemons] = useState([]);
     return (
-        <ContextProvider value={{allPokemons}}>
+        <Context.Provider value={{allPokemons}}>
             {children}
-        </ContextProvider>
+        </Context.Provider>
     );
 }
 
