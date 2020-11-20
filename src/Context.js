@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Context = React.createContext();
 
 function ContextProvider({children}) {
+    const [allPokemons, setAllPokemons] = useState([]);
     return (
-        <ContextProvider value="">
+        <ContextProvider value={{allPokemons}}>
             {children}
         </ContextProvider>
     );
