@@ -4,10 +4,13 @@ import {BrowserRouter as Router} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import App from './App';
+import {ContextProvider} from "./Context";
 
 ReactDOM.render(
-    <Router>
-        <App />
-    </Router>,
-  document.getElementById('root')
+    <ContextProvider>
+        <Router>
+            <App/>
+        </Router>
+    </ContextProvider>,
+    document.getElementById('root')
 );
