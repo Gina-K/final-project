@@ -3,23 +3,22 @@ import {
     Navbar,
     NavbarBrand,
     Nav,
-    NavLink
+    NavLink,
+    NavItem
 } from "reactstrap";
 import {Link} from "react-router-dom";
 
 function Header() {
     return (
         <Navbar color="primary" dark expand="md">
-            <Link to="/">
-                <NavbarBrand href="">Pokédex</NavbarBrand>
-            </Link>
+            <NavbarBrand tag={Link} to="/">Pokédex</NavbarBrand>
             <Nav className="ml-auto" navbar>
-                <Link to="/">
-                    <NavLink>All Pokémons</NavLink>
-                </Link>
-                <Link to="/caught">
-                    <NavLink>Caught Pokémons</NavLink>
-                </Link>
+                <NavItem>
+                    <NavLink tag={Link} to="/">All Pokémons</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink tag={Link} to="/caught">Caught </NavLink>
+                </NavItem>
             </Nav>
         </Navbar>
     );
