@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import {
     Col,
     Card,
@@ -8,10 +8,13 @@ import {
     Button
 } from "reactstrap";
 
+import {Context} from "../Context";
+
 function PokemonCard({pokemon}) {
     let img = pokemon.id <= 720 ? (process.env.PUBLIC_URL + `pokemons/${pokemon.id}.png`) : (process.env.PUBLIC_URL + "pokemons/confused_travolta.png");
     const [hovered, setHovered] = useState(false);
-    const hoverEffect = hovered && "primary";
+    const hoverEffect = hovered ? "primary" : "none";
+    const {catchPokemon} = useContext(Context);
 
     return (
         <Col xs="12" sm="6" md="4" lg="3">
@@ -26,7 +29,9 @@ function PokemonCard({pokemon}) {
                 </CardHeader>
                 <CardBody>
                     <CardImg width="100%" src={img} alt={pokemon.name} className="mb-2"/>
-                    <Button color="success">Catch!</Button>
+                    <Button color="success"
+                        onClick={() => catchPokemon(pokemon.id)}
+                    >Catch!</Button>
                 </CardBody>
             </Card>
         </Col>
