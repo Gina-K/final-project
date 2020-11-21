@@ -1,8 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
+
+import PokemonCard from "../components/PokemonCard";
+import {Context} from "../Context";
 
 function AllPokemons() {
-    return(
-        <h1>List of all pokemons</h1>
+    const {allPokemons} = useContext(Context);
+    const pokemons = allPokemons.map(pokemon => (
+        <PokemonCard key={pokemon.id} pokemon={pokemon}/>
+    ));
+
+    return (
+        <>
+            {pokemons}
+        </>
     );
 }
 
