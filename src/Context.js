@@ -12,8 +12,6 @@ function ContextProvider({children}) {
             .then(data => setAllPokemons(data))
     }, []);
 
-    console.log(allPokemons);
-
     return (
         <Context.Provider value={{allPokemons}}>
             {children}

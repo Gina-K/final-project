@@ -1,4 +1,8 @@
 import React, {useContext} from "react";
+import {
+    Container,
+    Row
+} from "reactstrap";
 
 import PokemonCard from "../components/PokemonCard";
 import {Context} from "../Context";
@@ -10,9 +14,11 @@ function AllPokemons() {
     ));
 
     return (
-        <>
-            {pokemons}
-        </>
+        <Container>
+            <Row>
+                {pokemons}
+            </Row>
+        </Container>
     );
 }
 
