@@ -5,7 +5,6 @@ const Context = React.createContext();
 
 function ContextProvider({children}) {
     const [allPokemons, setAllPokemons] = useState([]);
-    const [currentPokemon, setCurrentPokemon] = useState();
     const url = "http://localhost:3004/pokemons";
 
     useEffect(() => {
@@ -41,11 +40,6 @@ function ContextProvider({children}) {
             .then(data => console.log(data));
     }
 
-    function cardClickHandler(pokemon) {
-        console.log(`${pokemon.name} was clicked`);
-        setCurrentPokemon(pokemon);
-    }
-
     function buttonRender(pokemon) {
         if (pokemon.isCaught) {
             return <Button color="secondary"
@@ -58,8 +52,20 @@ function ContextProvider({children}) {
         }
     }
 
+    function getPokemonFromAddressBar() {
+        let path = window.location.pathname;
+        let pokemonName = path.substr(path.lastIndexOf("/") + 1);
+        if (allPokemons.length > 0) {
+            return allPokemons.filter(pokemon => pokemon.name === pokemonName)[0];
+        } else {
+            return fetch(`${url}?name=${pokemonName}`)
+                .then(response => response.json())
+                .then(data => data[0]);
+        }
+    }
+
     return (
-        <Context.Provider value={{allPokemons, buttonRender, cardClickHandler, currentPokemon}}>
+        <Context.Provider value={{allPokemons, buttonRender, getPokemonFromAddressBar}}>
             {children}
         </Context.Provider>
     );

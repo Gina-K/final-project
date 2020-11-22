@@ -20,7 +20,6 @@ function App() {
                 <Route path="/caught">
                     <CaughtPokemons/>
                 </Route>
-                {/* use generatePath for the Pokemon Details pages */}
                 <Route path="/details">
                     <PokemonDetails/>
                 </Route>

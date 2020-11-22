@@ -14,7 +14,8 @@ import {
 import {Context} from "../Context";
 
 function PokemonDetails() {
-    const {buttonRender, currentPokemon} = useContext(Context);
+    const {buttonRender, getPokemonFromAddressBar} = useContext(Context);
+    const currentPokemon = getPokemonFromAddressBar();
     const imgSrc = currentPokemon.id <= 720 ? (process.env.PUBLIC_URL + `../pokemons/${currentPokemon.id}.png`) : (process.env.PUBLIC_URL + "../pokemons/confused_travolta.jpg");
     const status = currentPokemon.isCaught ? `Was caught on ${currentPokemon.captureDate}` : "Not caught yet";
 
