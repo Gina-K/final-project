@@ -32,8 +32,6 @@ function PokemonCard({pokemon}) {
                             {pokemon.name}
                         </CardTitle>
                         <CardImg width="100%" src={imgSrc} alt={pokemon.name} className="mb-2"/>
-                        <CardText>{pokemon.isCaught ? "caught" : "not caught"}</CardText>
-                        <CardText>Captured: {pokemon.captureDate}</CardText>
                     </CardBody>
                 </Link>
                 {buttonRender(pokemon)}

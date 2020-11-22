@@ -15,7 +15,7 @@ function CaughtPokemons() {
             <PokemonCard key={pokemon.id} pokemon={pokemon}/>
         ));
     return (
-        <Container>
+        <Container className="mb-2 mb-lg-5">
             <Row>
                 {caughtPokemons}
             </Row>

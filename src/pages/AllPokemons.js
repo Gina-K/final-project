@@ -14,7 +14,7 @@ function AllPokemons() {
     ));
 
     return (
-        <Container>
+        <Container className="mb-2 mb-lg-5">
             <Row>
                 {pokemons}
             </Row>
