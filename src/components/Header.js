@@ -10,7 +10,7 @@ import {Link} from "react-router-dom";
 
 function Header() {
     return (
-        <Navbar color="primary" dark expand="md">
+        <Navbar color="primary" dark expand="md" className="sticky-top">
             <NavbarBrand tag={Link} to="/">Pokédex</NavbarBrand>
             <Nav className="ml-auto" navbar>
                 <NavItem>
