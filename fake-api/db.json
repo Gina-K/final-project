@@ -2,7 +2,9 @@
   "pokemons": [
     {
       "name": "bulbasaur",
-      "id": 1
+      "id": 1,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "ivysaur",
@@ -3446,7 +3448,9 @@
     },
     {
       "name": "abomasnow-mega",
-      "id": 10060
+      "id": 10060,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "floette-eternal",
