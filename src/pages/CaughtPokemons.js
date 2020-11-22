@@ -1,8 +1,25 @@
-import React from "react";
+import React, {useContext} from "react";
+import {
+    Container,
+    Row
+} from "reactstrap";
+
+import PokemonCard from "../components/PokemonCard";
+import {Context} from "../Context";
 
 function CaughtPokemons() {
-    return(
-        <h1>List of caught pokemons</h1>
+    const {allPokemons} = useContext(Context);
+    const caughtPokemons = allPokemons
+        .filter(pokemon => pokemon.isCaught === true)
+        .map(pokemon => (
+            <PokemonCard key={pokemon.id} pokemon={pokemon}/>
+        ));
+    return (
+        <Container>
+            <Row>
+                {caughtPokemons}
+            </Row>
+        </Container>
     );
 }
 

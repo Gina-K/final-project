@@ -62,7 +62,9 @@
     },
     {
       "name": "beedrill",
-      "id": 15
+      "id": 15,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "pidgey",
@@ -70,7 +72,9 @@
     },
     {
       "name": "pidgeotto",
-      "id": 17
+      "id": 17,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "pidgeot",
@@ -102,7 +106,9 @@
     },
     {
       "name": "pikachu",
-      "id": 25
+      "id": 25,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "raichu",
@@ -160,7 +166,9 @@
     },
     {
       "name": "jigglypuff",
-      "id": 39
+      "id": 39,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "wigglytuff",
@@ -204,7 +212,9 @@
     },
     {
       "name": "diglett",
-      "id": 50
+      "id": 50,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "dugtrio",
@@ -300,7 +310,9 @@
     },
     {
       "name": "geodude",
-      "id": 74
+      "id": 74,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "graveler",
@@ -1388,7 +1400,9 @@
     },
     {
       "name": "cradily",
-      "id": 346
+      "id": 346,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "anorith",
@@ -1412,7 +1426,9 @@
     },
     {
       "name": "kecleon",
-      "id": 352
+      "id": 352,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "shuppet",
@@ -1420,7 +1436,9 @@
     },
     {
       "name": "banette",
-      "id": 354
+      "id": 354,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "duskull",
@@ -1432,7 +1450,9 @@
     },
     {
       "name": "tropius",
-      "id": 357
+      "id": 357,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "chimecho",
@@ -1512,7 +1532,9 @@
     },
     {
       "name": "regirock",
-      "id": 377
+      "id": 377,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "regice",
@@ -1532,11 +1554,15 @@
     },
     {
       "name": "kyogre",
-      "id": 382
+      "id": 382,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "groudon",
-      "id": 383
+      "id": 383,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "rayquaza",
@@ -1684,7 +1710,9 @@
     },
     {
       "name": "cherubi",
-      "id": 420
+      "id": 420,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "cherrim",
@@ -1732,7 +1760,9 @@
     },
     {
       "name": "purugly",
-      "id": 432
+      "id": 432,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "chingling",
@@ -1788,7 +1818,9 @@
     },
     {
       "name": "munchlax",
-      "id": 446
+      "id": 446,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "riolu",
@@ -1864,7 +1896,9 @@
     },
     {
       "name": "tangrowth",
-      "id": 465
+      "id": 465,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "electivire",
@@ -1908,7 +1942,9 @@
     },
     {
       "name": "probopass",
-      "id": 476
+      "id": 476,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "dusknoir",
@@ -1952,7 +1988,9 @@
     },
     {
       "name": "giratina-altered",
-      "id": 487
+      "id": 487,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "cresselia",
@@ -2036,7 +2074,9 @@
     },
     {
       "name": "stoutland",
-      "id": 508
+      "id": 508,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "purrloin",
@@ -2048,7 +2088,9 @@
     },
     {
       "name": "pansage",
-      "id": 511
+      "id": 511,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "simisage",
@@ -2080,7 +2122,9 @@
     },
     {
       "name": "pidove",
-      "id": 519
+      "id": 519,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "tranquill",
@@ -2168,7 +2212,9 @@
     },
     {
       "name": "swadloon",
-      "id": 541
+      "id": 541,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "leavanny",
@@ -2276,7 +2322,9 @@
     },
     {
       "name": "trubbish",
-      "id": 568
+      "id": 568,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "garbodor",
@@ -2336,7 +2384,9 @@
     },
     {
       "name": "vanillish",
-      "id": 583
+      "id": 583,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "vanilluxe",
@@ -2536,7 +2586,9 @@
     },
     {
       "name": "deino",
-      "id": 633
+      "id": 633,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "zweilous",
@@ -2580,11 +2632,15 @@
     },
     {
       "name": "zekrom",
-      "id": 644
+      "id": 644,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "landorus-incarnate",
-      "id": 645
+      "id": 645,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "kyurem",
@@ -2596,7 +2652,9 @@
     },
     {
       "name": "meloetta-aria",
-      "id": 648
+      "id": 648,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "genesect",
@@ -2644,7 +2702,9 @@
     },
     {
       "name": "diggersby",
-      "id": 660
+      "id": 660,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "fletchling",
@@ -2788,7 +2848,9 @@
     },
     {
       "name": "tyrunt",
-      "id": 696
+      "id": 696,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "tyrantrum",
@@ -2820,7 +2882,9 @@
     },
     {
       "name": "goomy",
-      "id": 704
+      "id": 704,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "sliggoo",

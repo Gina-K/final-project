@@ -12,7 +12,7 @@ import {
 import {Context} from "../Context";
 
 function PokemonCard({pokemon}) {
-    let imgSrc = pokemon.id <= 720 ? (process.env.PUBLIC_URL + `pokemons/${pokemon.id}.png`) : (process.env.PUBLIC_URL + "pokemons/confused_travolta.png");
+    let imgSrc = pokemon.id <= 720 ? (process.env.PUBLIC_URL + `pokemons/${pokemon.id}.png`) : (process.env.PUBLIC_URL + "pokemons/confused_travolta.jpg");
     const [hovered, setHovered] = useState(false);
     const hoverEffect = hovered ? "primary" : "none";
     const {catchPokemon} = useContext(Context);
