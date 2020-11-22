@@ -17,6 +17,18 @@ function PokemonCard({pokemon}) {
     const hoverEffect = hovered ? "primary" : "none";
     const {catchPokemon} = useContext(Context);
 
+    function button() {
+        if (pokemon.isCaught) {
+            return <Button color="secondary"
+                           disabled
+            >Caught</Button>
+        } else {
+            return <Button color="success"
+                           onClick={() => catchPokemon(pokemon.id)}
+            >Catch!</Button>
+        }
+    }
+
     return (
         <Col xs="12" sm="6" md="4" lg="3">
             <Card className="mt-4"
@@ -32,9 +44,7 @@ function PokemonCard({pokemon}) {
                     <CardImg width="100%" src={imgSrc} alt={pokemon.name} className="mb-2"/>
                     <CardText>{pokemon.isCaught ? "caught" : "not caught"}</CardText>
                     <CardText>Captured: {pokemon.captureDate}</CardText>
-                    <Button color="success"
-                        onClick={() => catchPokemon(pokemon.id)}
-                    >Catch!</Button>
+                    {button()}
                 </CardBody>
             </Card>
         </Col>
