@@ -5,13 +5,14 @@ import {
     CardHeader,
     CardImg,
     CardBody,
+    CardText,
     Button
 } from "reactstrap";
 
 import {Context} from "../Context";
 
 function PokemonCard({pokemon}) {
-    let img = pokemon.id <= 720 ? (process.env.PUBLIC_URL + `pokemons/${pokemon.id}.png`) : (process.env.PUBLIC_URL + "pokemons/confused_travolta.png");
+    let imgSrc = pokemon.id <= 720 ? (process.env.PUBLIC_URL + `pokemons/${pokemon.id}.png`) : (process.env.PUBLIC_URL + "pokemons/confused_travolta.png");
     const [hovered, setHovered] = useState(false);
     const hoverEffect = hovered ? "primary" : "none";
     const {catchPokemon} = useContext(Context);
@@ -28,7 +29,9 @@ function PokemonCard({pokemon}) {
                     {pokemon.name}
                 </CardHeader>
                 <CardBody>
-                    <CardImg width="100%" src={img} alt={pokemon.name} className="mb-2"/>
+                    <CardImg width="100%" src={imgSrc} alt={pokemon.name} className="mb-2"/>
+                    <CardText>{pokemon.isCaught ? "caught" : "not caught"}</CardText>
+                    <CardText>Captured: {pokemon.captureDate}</CardText>
                     <Button color="success"
                         onClick={() => catchPokemon(pokemon.id)}
                     >Catch!</Button>
