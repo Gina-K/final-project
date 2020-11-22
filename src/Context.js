@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from "react";
+import {Button} from "reactstrap";
 
 const Context = React.createContext();
 
 function ContextProvider({children}) {
     const [allPokemons, setAllPokemons] = useState([]);
+    const [currentPokemon, setCurrentPokemon] = useState();
     const url = "http://localhost:3004/pokemons";
 
     useEffect(() => {
@@ -39,8 +41,25 @@ function ContextProvider({children}) {
             .then(data => console.log(data));
     }
 
+    function cardClickHandler(pokemon) {
+        console.log(`${pokemon.name} was clicked`);
+        setCurrentPokemon(pokemon);
+    }
+
+    function buttonRender(pokemon) {
+        if (pokemon.isCaught) {
+            return <Button color="secondary"
+                           disabled
+            >Caught</Button>
+        } else {
+            return <Button color="success"
+                           onClick={() => catchPokemon(pokemon.id)}
+            >Catch!</Button>
+        }
+    }
+
     return (
-        <Context.Provider value={{allPokemons, catchPokemon}}>
+        <Context.Provider value={{allPokemons, buttonRender, cardClickHandler, currentPokemon}}>
             {children}
         </Context.Provider>
     );
