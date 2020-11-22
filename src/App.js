@@ -21,7 +21,7 @@ function App() {
                     <CaughtPokemons/>
                 </Route>
                 {/* use generatePath for the Pokemon Details pages */}
-                <Route path="/pikachu">
+                <Route path="/details">
                     <PokemonDetails/>
                 </Route>
             </Switch>

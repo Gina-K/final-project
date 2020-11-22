@@ -14,9 +14,8 @@ import {
 import {Context} from "../Context";
 
 function PokemonDetails() {
-    const {buttonRender} = useContext(Context);
-    const currentPokemon = {name: "charmander", id: 4, isCaught: true, captureDate: "22 November 2020"};
-    const imgSrc = currentPokemon.id <= 720 ? (process.env.PUBLIC_URL + `pokemons/${currentPokemon.id}.png`) : (process.env.PUBLIC_URL + "pokemons/confused_travolta.jpg");
+    const {buttonRender, currentPokemon} = useContext(Context);
+    const imgSrc = currentPokemon.id <= 720 ? (process.env.PUBLIC_URL + `../pokemons/${currentPokemon.id}.png`) : (process.env.PUBLIC_URL + "../pokemons/confused_travolta.jpg");
     const status = currentPokemon.isCaught ? `Was caught on ${currentPokemon.captureDate}` : "Not caught yet";
 
     return (
