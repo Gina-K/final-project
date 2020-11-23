@@ -36,7 +36,7 @@ function ContextProvider({children}) {
     }
 
     function catchPokemon(id) {
-        let caughtPokemon;
+        let caughtPokemon = {};
         const today = new Date().toLocaleDateString("en-GB", {day: "2-digit", month: "long", year: "numeric"});
         const updatedArray = allPokemons.map(pokemon => {
             if (pokemon.id === id) {
