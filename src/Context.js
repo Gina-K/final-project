@@ -5,20 +5,34 @@ const Context = React.createContext();
 
 function ContextProvider({children}) {
     const [allPokemons, setAllPokemons] = useState([]);
-    const [itemsLimit, setItemsLimit] = useState(24);
+    const [caughtPokemons, setCaughtPokemons] = useState([]);
+    const [itemsLimitAll, setItemsLimitAll] = useState(24);
+    const [itemsLimitCaught, setItemsLimitCaught] = useState(24);
     const url = "http://localhost:3004/pokemons";
 
     useEffect(downloadData, []);
 
-    function downloadData(itemsLimit = 24, filter= "") {
-        fetch(`${url}?${filter}_page=1&_limit=${itemsLimit}`)
+    function downloadData(limit = 24) {
+        fetch(`${url}?$_page=1&_limit=${limit}`)
             .then(response => response.json())
             .then(data => setAllPokemons(data))
     }
 
-    function loadMore() {
-        downloadData(itemsLimit + 24);
-        setItemsLimit(itemsLimit + 24);
+    function downloadCaught(limit = 24) {
+        console.log("...loading");
+        fetch(`${url}?isCaught=true&_page=1&_limit=${limit}`)
+            .then(response => response.json())
+            .then(data => setCaughtPokemons(data))
+    }
+
+    function loadMoreAll() {
+        downloadData(itemsLimitAll + 24);
+        setItemsLimitAll(itemsLimitAll + 24);
+    }
+
+    function loadMoreCaught() {
+        downloadCaught(itemsLimitCaught + 24);
+        setItemsLimitAll(itemsLimitCaught + 24);
     }
 
     function catchPokemon(id) {
@@ -78,7 +92,10 @@ function ContextProvider({children}) {
             buttonRender,
             getPokemonFromAddressBar,
             downloadData,
-            loadMore
+            downloadCaught,
+            caughtPokemons,
+            loadMoreAll,
+            loadMoreCaught
         }}>
             {children}
         </Context.Provider>

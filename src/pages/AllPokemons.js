@@ -9,7 +9,7 @@ import {Context} from "../Context";
 import LoadMoreBtn from "../components/LoadMoreBtn";
 
 function AllPokemons() {
-    const {allPokemons} = useContext(Context);
+    const {allPokemons, loadMoreAll, downloadData} = useContext(Context);
     const pokemons = allPokemons.map(pokemon => (
         <PokemonCard key={pokemon.id} pokemon={pokemon}/>
     ));
@@ -21,7 +21,7 @@ function AllPokemons() {
                     {pokemons}
                 </Row>
             </Container>
-            <LoadMoreBtn />
+            <LoadMoreBtn clickHandler={loadMoreAll}/>
         </>
     );
 }
