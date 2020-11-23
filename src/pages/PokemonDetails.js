@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import {
     Card,
     CardText,
@@ -14,8 +14,12 @@ import {
 import {Context} from "../Context";
 
 function PokemonDetails() {
-    const {buttonRender, getPokemonFromAddressBar} = useContext(Context);
-    const currentPokemon = getPokemonFromAddressBar();
+    const {buttonRender, getPokemonFromAddressBar, currentPokemon} = useContext(Context);
+    // let currentPokemon = getPokemonFromAddressBar();
+    useEffect(getPokemonFromAddressBar, []);
+
+
+    console.log(`current pokemon: ${currentPokemon}`);
     const imgSrc = currentPokemon.id <= 720 ? (process.env.PUBLIC_URL + `../pokemons/${currentPokemon.id}.png`) : (process.env.PUBLIC_URL + "../pokemons/confused_travolta.jpg");
     const status = currentPokemon.isCaught ? `Was caught on ${currentPokemon.captureDate}` : "Not caught yet";
 

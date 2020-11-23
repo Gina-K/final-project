@@ -6,6 +6,7 @@ const Context = React.createContext();
 function ContextProvider({children}) {
     const [allPokemons, setAllPokemons] = useState([]);
     const [caughtPokemons, setCaughtPokemons] = useState([]);
+    const [currentPokemon, setCurrentPokemon] = useState({});
     const [itemsLimitAll, setItemsLimitAll] = useState(24);
     const [itemsLimitCaught, setItemsLimitCaught] = useState(24);
     const url = "http://localhost:3004/pokemons";
@@ -75,15 +76,21 @@ function ContextProvider({children}) {
     }
 
     function getPokemonFromAddressBar() {
+        console.log("getPokemonFromAddressBar run");
         let path = window.location.pathname;
         let pokemonName = path.substr(path.lastIndexOf("/") + 1);
-        if (allPokemons.length > 0) {
-            return allPokemons.filter(pokemon => pokemon.name === pokemonName)[0];
-        } else {
-            return fetch(`${url}?name=${pokemonName}`)
+        // if (allPokemons.length > 0) {
+        //     return allPokemons.filter(pokemon => pokemon.name === pokemonName)[0];
+        // } else {
+        //     return fetch(`${url}?name=${pokemonName}`)
+        //         .then(response => response.json())
+        //         .then(data => data[0]);
+        // }
+
+        fetch(`${url}?name=${pokemonName}`)
                 .then(response => response.json())
-                .then(data => data[0]);
-        }
+                .then(data => setCurrentPokemon(data[0]));
+        // console.log(`pokemon from fetch: ${currentPokemon}`);
     }
 
     return (
@@ -95,7 +102,8 @@ function ContextProvider({children}) {
             downloadCaught,
             caughtPokemons,
             loadMoreAll,
-            loadMoreCaught
+            loadMoreCaught,
+            currentPokemon
         }}>
             {children}
         </Context.Provider>
