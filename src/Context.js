@@ -10,8 +10,8 @@ function ContextProvider({children}) {
 
     useEffect(downloadData, []);
 
-    function downloadData(itemsLimit = 24) {
-        fetch(`${url}?_page=1&_limit=${itemsLimit}`)
+    function downloadData(itemsLimit = 24, filter= "") {
+        fetch(`${url}?${filter}_page=1&_limit=${itemsLimit}`)
             .then(response => response.json())
             .then(data => setAllPokemons(data))
     }
