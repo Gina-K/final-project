@@ -28,7 +28,9 @@
     },
     {
       "name": "squirtle",
-      "id": 7
+      "id": 7,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "wartortle",
@@ -184,7 +186,9 @@
     },
     {
       "name": "oddish",
-      "id": 43
+      "id": 43,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "gloom",
@@ -204,7 +208,9 @@
     },
     {
       "name": "venonat",
-      "id": 48
+      "id": 48,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "venomoth",
@@ -222,7 +228,9 @@
     },
     {
       "name": "meowth",
-      "id": 52
+      "id": 52,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "persian",
@@ -332,7 +340,9 @@
     },
     {
       "name": "slowpoke",
-      "id": 79
+      "id": 79,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "slowbro",
@@ -348,7 +358,9 @@
     },
     {
       "name": "farfetchd",
-      "id": 83
+      "id": 83,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "doduo",
@@ -868,7 +880,9 @@
     },
     {
       "name": "shuckle",
-      "id": 213
+      "id": 213,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "heracross",
@@ -1164,7 +1178,9 @@
     },
     {
       "name": "slakoth",
-      "id": 287
+      "id": 287,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "vigoroth",
@@ -1312,7 +1328,9 @@
     },
     {
       "name": "torkoal",
-      "id": 324
+      "id": 324,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "spoink",
@@ -2062,7 +2080,9 @@
     },
     {
       "name": "watchog",
-      "id": 505
+      "id": 505,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "lillipup",
@@ -2376,7 +2396,9 @@
     },
     {
       "name": "swanna",
-      "id": 581
+      "id": 581,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "vanillite",
@@ -2418,7 +2440,9 @@
     },
     {
       "name": "amoonguss",
-      "id": 591
+      "id": 591,
+      "isCaught": true,
+      "captureDate": "23 November 2020"
     },
     {
       "name": "frillish",
@@ -2764,7 +2788,9 @@
     },
     {
       "name": "pangoro",
-      "id": 675
+      "id": 675,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "furfrou",
@@ -2862,7 +2888,9 @@
     },
     {
       "name": "aurorus",
-      "id": 699
+      "id": 699,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "sylveon",
@@ -2900,7 +2928,9 @@
     },
     {
       "name": "phantump",
-      "id": 708
+      "id": 708,
+      "isCaught": true,
+      "captureDate": "22 November 2020"
     },
     {
       "name": "trevenant",

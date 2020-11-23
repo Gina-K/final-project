@@ -4,9 +4,7 @@ import {
     Card,
     CardTitle,
     CardImg,
-    CardBody,
-    CardText,
-    Button
+    CardBody
 } from "reactstrap";
 import {Link} from "react-router-dom";
 

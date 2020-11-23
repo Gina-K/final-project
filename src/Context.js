@@ -20,7 +20,6 @@ function ContextProvider({children}) {
     }
 
     function downloadCaught(limit = 24) {
-        console.log("...loading");
         fetch(`${url}?isCaught=true&_page=1&_limit=${limit}`)
             .then(response => response.json())
             .then(data => setCaughtPokemons(data))
@@ -33,7 +32,7 @@ function ContextProvider({children}) {
 
     function loadMoreCaught() {
         downloadCaught(itemsLimitCaught + 24);
-        setItemsLimitAll(itemsLimitCaught + 24);
+        setItemsLimitCaught(itemsLimitCaught + 24);
     }
 
     function catchPokemon(id) {
@@ -48,6 +47,7 @@ function ContextProvider({children}) {
         });
         setAllPokemons(updatedArray);
         putUpdate(caughtPokemon);
+        downloadCurrentPokemon(caughtPokemon.name);
     }
 
     function putUpdate(pokemon) {
@@ -60,7 +60,7 @@ function ContextProvider({children}) {
             body: JSON.stringify(pokemon),
         })
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => data);
     }
 
     function buttonRender(pokemon) {
@@ -75,22 +75,16 @@ function ContextProvider({children}) {
         }
     }
 
+    function downloadCurrentPokemon(pokemonName) {
+        fetch(`${url}?name=${pokemonName}`)
+            .then(response => response.json())
+            .then(data => setCurrentPokemon(data[0]));
+    }
+
     function getPokemonFromAddressBar() {
-        console.log("getPokemonFromAddressBar run");
         let path = window.location.pathname;
         let pokemonName = path.substr(path.lastIndexOf("/") + 1);
-        // if (allPokemons.length > 0) {
-        //     return allPokemons.filter(pokemon => pokemon.name === pokemonName)[0];
-        // } else {
-        //     return fetch(`${url}?name=${pokemonName}`)
-        //         .then(response => response.json())
-        //         .then(data => data[0]);
-        // }
-
-        fetch(`${url}?name=${pokemonName}`)
-                .then(response => response.json())
-                .then(data => setCurrentPokemon(data[0]));
-        // console.log(`pokemon from fetch: ${currentPokemon}`);
+        downloadCurrentPokemon(pokemonName);
     }
 
     return (

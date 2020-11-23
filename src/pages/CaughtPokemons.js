@@ -9,17 +9,14 @@ import {Context} from "../Context";
 import LoadMoreBtn from "../components/LoadMoreBtn";
 
 function CaughtPokemons() {
-    const {allPokemons, downloadCaught, caughtPokemons,  loadMoreCaught} = useContext(Context)
+    const {downloadCaught, caughtPokemons, loadMoreCaught} = useContext(Context);
 
     useEffect(downloadCaught, []);
+
     const pokemons = caughtPokemons.map(pokemon => (
         <PokemonCard key={pokemon.id} pokemon={pokemon}/>
     ));
-    // const caughtPokemons = allPokemons
-    //     .filter(pokemon => pokemon.isCaught === true)
-    //     .map(pokemon => (
-    //         <PokemonCard key={pokemon.id} pokemon={pokemon}/>
-    //     ));
+
     return (
         <>
             <Container className="mb-2 mb-lg-5">
